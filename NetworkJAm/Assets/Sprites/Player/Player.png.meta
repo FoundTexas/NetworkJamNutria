@@ -552,8 +552,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures:
-    - texture: {fileID: 2800000, guid: 4db765527787dea41949cc01bd6aadef, type: 3}
-      name: main
     - texture: {fileID: 2800000, guid: 878fdd21ac655d642b2bf494d7c8395d, type: 3}
       name: emission
   spritePackingTag: 

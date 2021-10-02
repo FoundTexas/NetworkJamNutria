@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
     }
 
@@ -90,8 +90,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Animations()
     {
-        //animator.SetFloat("DirectionX", lookDir.x);
-        //animator.SetFloat("DirectionY", lookDir.y);
+
+            animator.SetFloat("X", lookDir.x);
+
+        animator.SetFloat("Y", rb2d.velocity.y);
         //animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
