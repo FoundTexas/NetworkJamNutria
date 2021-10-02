@@ -8,7 +8,7 @@ public class BulletCollision : MonoBehaviour
     public ParticleSystem bulletExplode;
     public bool isEnemy;
     public int BulletDamage;
-
+   
     void OnTriggerEnter2D(Collider2D collider)
     {
         //Debug.Log("collision");
