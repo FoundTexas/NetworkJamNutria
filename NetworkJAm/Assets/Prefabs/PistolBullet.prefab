@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1195842451971863983}
   - component: {fileID: 1244843241216569318}
   - component: {fileID: 7126212276585405670}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PistolBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4364568152138003058}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}

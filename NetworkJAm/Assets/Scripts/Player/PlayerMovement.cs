@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private ParticleSystem shootParticle;
     [SerializeField] private GameObject bulletPrefab;
 
-    bool facingRight = true;
+    public bool facingRight = false;
     Animator animator;
     Rigidbody2D rb2d;
     Vector2 movement,mousePos,lookDir;
