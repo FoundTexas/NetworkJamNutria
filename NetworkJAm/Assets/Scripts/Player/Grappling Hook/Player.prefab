@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5536884259654665895}
   - component: {fileID: 4060207915631751426}
   - component: {fileID: 2805493584263522760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 3630422902480314711}
   - component: {fileID: 3630422902480314708}
   - component: {fileID: 7158498457405801084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GrapplingGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3630422902942576933}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 3630422903116112494}
   - component: {fileID: 3630422903116112480}
   - component: {fileID: 3630422903116112481}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 1175541061352304938}
   - component: {fileID: 56909195465888647}
   - component: {fileID: 4156066794264365648}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 6310736532549851405}
   - component: {fileID: 4713308164466751570}
   - component: {fileID: 4973841764736841200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -984,7 +984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1979677131367155874}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GunHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2109276585811235024}
   - component: {fileID: 3800823711361423616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

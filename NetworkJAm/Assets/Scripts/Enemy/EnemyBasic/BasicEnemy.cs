@@ -37,11 +37,18 @@ public class BasicEnemy : MonoBehaviour
             {
                 if (hitinfo.collider.gameObject.layer==9)
                 {
+                    ContadorDispararCada();
+                    if (Count >= 2.5f)
+                    {
+                        DispararPlayer();
+                    }
+                    Debug.DrawLine(transform.position, hitinfo.point, Color.red);
                     Debug.Log("Le estoy printeando al player");
                 }
                 else
                 {
                     Debug.Log("Le estoy pegando a otra cosa");
+                    Debug.DrawLine(transform.position, hitinfo.point, Color.green);
                 }
             }
           //  Physics2D.Raycast(transform.position,DireccionPlayer, DistancePlayer, hit, layerPlayer);
