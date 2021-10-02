@@ -20,6 +20,7 @@ public class GrapplingGun : MonoBehaviour
     public Transform gunHolder;
     public Transform gunPivot;
     public Transform firePoint;
+    public GameObject harpoon;
 
     [Header("Rotation:")]
     [SerializeField] private bool rotateOverTime = true;
@@ -67,13 +68,15 @@ public class GrapplingGun : MonoBehaviour
     {
         Mouse_FirePoint_DistanceVector = m_camera.ScreenToWorldPoint(Input.mousePosition) - gunPivot.position;
 
+        harpoon.transform.position = m_springJoint2D.connectedAnchor;
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             anim.SetTrigger("Start");
             Time.timeScale = 0.3f;
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
-            
+            harpoon.SetActive(false);
             //SetGrapplePoint();
         }
         if (Input.GetKeyDown("space"))
@@ -81,6 +84,7 @@ public class GrapplingGun : MonoBehaviour
             Time.timeScale = 1f;
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
+            harpoon.SetActive(false);
             //SetGrapplePoint();
         }
         /*else if (Input.GetKey(KeyCode.Mouse0))
@@ -105,6 +109,7 @@ public class GrapplingGun : MonoBehaviour
         }*/
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
+            harpoon.SetActive(true);
             anim.SetTrigger("ReStart");
             Time.timeScale = 1f;
             SetGrapplePoint();
