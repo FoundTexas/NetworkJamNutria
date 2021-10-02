@@ -137,8 +137,7 @@ MonoBehaviour:
   type: 0
   LifeTime: 5
   Speed: 3
-  TimeToExplote: 3
-  ColliderExplosion: {fileID: 0}
+  SeguirDisparo: 1
 --- !u!114 &8279429304339274028
 MonoBehaviour:
   m_ObjectHideFlags: 0
