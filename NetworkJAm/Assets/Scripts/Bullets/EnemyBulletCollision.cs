@@ -21,14 +21,15 @@ public class EnemyBulletCollision : MonoBehaviour
     {
         Glob,
         Hidra,
-        Crab
+        Crab,
+        Calamar
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
         //Debug.Log("collision");
         switch (TipoEnemigo)
         {
-            case TipeEnemy.Glob:
+            case TipeEnemy.Calamar:
                 if (collider.gameObject.CompareTag("Obstacle"))
                 {
                     Instantiate(bulletExplode, transform.position, Quaternion.identity);
@@ -53,6 +54,12 @@ public class EnemyBulletCollision : MonoBehaviour
 
                 ; break;
             case TipeEnemy.Crab:
+                if (collider.gameObject.CompareTag("Obstacle"))
+                {
+                    Instantiate(bulletExplode, transform.position, Quaternion.identity);
+                    Destroy(gameObject);
+                }; break;
+            case TipeEnemy.Glob:
                 if (collider.gameObject.CompareTag("Obstacle"))
                 {
                     Instantiate(bulletExplode, transform.position, Quaternion.identity);

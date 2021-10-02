@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletExplode: {fileID: 6191634143265722576, guid: 3bb4998a130611246a50b382171122e1,
     type: 3}
-  TipoEnemigo: 0
+  TipoEnemigo: 3
   prefabBullHidra: {fileID: 0}
   DireccionBull: []
   NumOfBullsHidra: 0

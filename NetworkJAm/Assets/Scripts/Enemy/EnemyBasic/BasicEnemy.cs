@@ -14,6 +14,7 @@ public class BasicEnemy : MonoBehaviour
     [SerializeField] private bool MultiBull;
     private Animator animacionController;
     private bool RayTouchSometing;
+    [SerializeField]private float TimeToShoot;
     public float RangoDeteccionEnemigo1 { get => RangoDeteccionEnemigo; set => RangoDeteccionEnemigo = value; }
     public float Count1 { get => Count; set => Count = value; }
     public GameObject Bull1 { get => Bull; set => Bull = value; }
@@ -38,7 +39,7 @@ public class BasicEnemy : MonoBehaviour
                 if (hitinfo.collider.gameObject.layer==9)
                 {
                     ContadorDispararCada();
-                    if (Count >= 2.5f)
+                    if (Count >= TimeToShoot)
                     {
                         DispararPlayer();
                     }

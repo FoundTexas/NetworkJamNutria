@@ -122,6 +122,7 @@ MonoBehaviour:
   Bull: {fileID: 6992466055367974947, guid: 702742d00dc868c46bbc43e29d2359f1, type: 3}
   DireccionBull: []
   MultiBull: 0
+  TimeToShoot: 2
 --- !u!61 &7560357130366379627
 BoxCollider2D:
   m_ObjectHideFlags: 0
