@@ -546,9 +546,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e424fa4613c84ab44bd4a43ef5306d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 6
+  KnockBack: 50
+  bulletForce: 20
   cam: {fileID: 0}
   weaponHolder: {fileID: 1979677131367155874}
+  firePoint: {fileID: 3630422902942576933}
+  shootParticle: {fileID: 5627102313998767717, guid: 30959c4d9169fb248821c02da7584d74,
+    type: 3}
+  bulletPrefab: {fileID: 4004147230578884579, guid: df46eba5680b91149b64dcec215868cc,
+    type: 3}
 --- !u!50 &3630422903986240136
 Rigidbody2D:
   serializedVersion: 4

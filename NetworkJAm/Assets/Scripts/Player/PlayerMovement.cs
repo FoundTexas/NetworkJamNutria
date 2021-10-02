@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Stuff:")]
-    [SerializeField] private float speed = 0.5f;
+    [SerializeField] private float speed = 0.5f, KnockBack = 6, bulletForce = 20f;
     [SerializeField] private Camera cam;
-    [SerializeField] private Transform weaponHolder;
+    [SerializeField] private Transform weaponHolder, firePoint;
+    [SerializeField] private ParticleSystem shootParticle;
+    [SerializeField] private GameObject bulletPrefab;
 
     bool facingRight = true;
     Animator animator;
@@ -30,6 +32,14 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKeyUp("space"))
         {
             Time.timeScale = 1;
+        }
+        else if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            rb2d.AddForce(lookDir * -KnockBack);
+            Instantiate(shootParticle, firePoint.position, firePoint.rotation);
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
+            //bulletRB.AddForce(firePoint.right * bulletForce + new Vector3(0f, Random.Range(-120f, 120f), 0f));
         }
         Animations();
     }
@@ -55,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         if(movement != Vector2.zero)
         {
             rb2d.velocity = Vector2.zero;
-            rb2d.AddRelativeForce(movement * speed);
+            rb2d.AddForce(movement * speed);
         }
     }
 
@@ -76,4 +86,6 @@ public class PlayerMovement : MonoBehaviour
         //animator.SetFloat("DirectionY", lookDir.y);
         //animator.SetFloat("Speed", movement.sqrMagnitude);
     }
+
+
 }
