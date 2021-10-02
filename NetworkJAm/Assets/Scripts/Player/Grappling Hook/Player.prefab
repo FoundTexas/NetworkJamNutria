@@ -602,7 +602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3630422903986240139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.371, y: -3.8789997, z: -1.4570312}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1979677131367155874}
@@ -632,6 +632,7 @@ MonoBehaviour:
     type: 3}
   bulletPrefab: {fileID: 4004147230578884579, guid: df46eba5680b91149b64dcec215868cc,
     type: 3}
+  facingRight: 0
 --- !u!50 &3630422903986240136
 Rigidbody2D:
   serializedVersion: 4
@@ -712,7 +713,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 3719299328343035327, guid: 881f7fa3d17ee164ea5b4f8cd09ccaa6,
+  m_Sprite: {fileID: -2311659948842064771, guid: 4db765527787dea41949cc01bd6aadef,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

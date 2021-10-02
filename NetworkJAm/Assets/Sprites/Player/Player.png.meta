@@ -1,0 +1,564 @@
+fileFormatVersion: 2
+guid: 4db765527787dea41949cc01bd6aadef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2311659948842064771
+    second: Player_0
+  - first:
+      213: 7364682651488144517
+    second: Player_1
+  - first:
+      213: -6287787046888575383
+    second: Player_2
+  - first:
+      213: -1182821291677670348
+    second: Player_3
+  - first:
+      213: -4709456396536258026
+    second: Player_4
+  - first:
+      213: -4529042392078601758
+    second: Player_5
+  - first:
+      213: -7446026091647042388
+    second: Player_6
+  - first:
+      213: 5938012242645255967
+    second: Player_7
+  - first:
+      213: -4245738604243887485
+    second: Player_8
+  - first:
+      213: 2473453845335418800
+    second: Player_9
+  - first:
+      213: -3287367053296241113
+    second: Player_10
+  - first:
+      213: -5319882733741912588
+    second: Player_11
+  - first:
+      213: 7365574002475698461
+    second: Player_12
+  - first:
+      213: 6472545519820947264
+    second: Player_13
+  - first:
+      213: -2472340072831945791
+    second: Player_14
+  - first:
+      213: 4681514556078180949
+    second: Player_15
+  - first:
+      213: -2521826894279438384
+    second: Player_16
+  - first:
+      213: -7338765713033929952
+    second: Player_17
+  - first:
+      213: 1522305984107872113
+    second: Player_18
+  - first:
+      213: -661973496601677656
+    second: Player_19
+  - first:
+      213: -5989208844104669019
+    second: Player_20
+  - first:
+      213: -620360788158790383
+    second: Player_21
+  - first:
+      213: 5007636379019871947
+    second: Player_22
+  - first:
+      213: 585951966842662488
+    second: Player_23
+  - first:
+      213: -5324252115843577105
+    second: Player_24
+  - first:
+      213: 802321206317977270
+    second: Player_25
+  - first:
+      213: -2531074035140014093
+    second: Player_26
+  - first:
+      213: 2425571995158539275
+    second: Player_27
+  - first:
+      213: 7504173757061796091
+    second: Player_28
+  - first:
+      213: -482043112589295754
+    second: Player_29
+  - first:
+      213: 5858650361913189150
+    second: Player_30
+  - first:
+      213: -8673286262977101647
+    second: Player_31
+  - first:
+      213: -5582666879068068913
+    second: Player_32
+  - first:
+      213: -1143793458617422335
+    second: Player_33
+  - first:
+      213: -3357028997785511978
+    second: Player_34
+  - first:
+      213: -1287317561693210830
+    second: Player_35
+  - first:
+      213: -880019952005955485
+    second: Player_36
+  - first:
+      213: -2236138401977818221
+    second: Player_37
+  - first:
+      213: 444229463124618271
+    second: Player_38
+  - first:
+      213: 4058882637061436657
+    second: Player_39
+  - first:
+      213: -6654760982662145220
+    second: Player_40
+  - first:
+      213: -1644491751466927929
+    second: Player_41
+  - first:
+      213: 840494989937961389
+    second: Player_42
+  - first:
+      213: 7595658228077749015
+    second: Player_43
+  - first:
+      213: -2981845286574036419
+    second: Player_44
+  - first:
+      213: -7788624319470281706
+    second: Player_45
+  - first:
+      213: -6084218201566942072
+    second: Player_46
+  - first:
+      213: -2938239205550241072
+    second: Player_47
+  - first:
+      213: 39037826329288984
+    second: Player_48
+  - first:
+      213: 6591604299041279620
+    second: Player_49
+  - first:
+      213: -6860566288110525432
+    second: Player_50
+  - first:
+      213: 8972628740631471832
+    second: Player_51
+  - first:
+      213: -7838076412869566698
+    second: Player_52
+  - first:
+      213: 8558285431152173748
+    second: Player_53
+  - first:
+      213: -6691299099229028265
+    second: Player_54
+  - first:
+      213: 2791054384222058016
+    second: Player_55
+  - first:
+      213: -7549882777698261138
+    second: Player_56
+  - first:
+      213: 4647185714816181435
+    second: Player_57
+  - first:
+      213: -2836108946835448534
+    second: Player_58
+  - first:
+      213: 7130207714882495145
+    second: Player_59
+  - first:
+      213: -5090432395081248059
+    second: Player_60
+  - first:
+      213: 4093241791999138243
+    second: Player_61
+  - first:
+      213: -1192265370108053753
+    second: Player_62
+  - first:
+      213: 4679747017639254644
+    second: Player_63
+  - first:
+      213: -6823492380077040032
+    second: Player_64
+  - first:
+      213: -1063223915845365687
+    second: Player_65
+  - first:
+      213: -486320902874181440
+    second: Player_66
+  - first:
+      213: 8435448028263584237
+    second: Player_67
+  - first:
+      213: -8757205833137848213
+    second: Player_68
+  - first:
+      213: -2695527081263119483
+    second: Player_69
+  - first:
+      213: -8699247974158964059
+    second: Player_70
+  - first:
+      213: 372960425437492981
+    second: Player_71
+  - first:
+      213: -315240834156095439
+    second: Player_72
+  - first:
+      213: -2584698705904040467
+    second: Player_73
+  - first:
+      213: -5143092131790167896
+    second: Player_74
+  - first:
+      213: -6661293911661947031
+    second: Player_75
+  - first:
+      213: -1142105706051527918
+    second: Player_76
+  - first:
+      213: 2497831913392025759
+    second: Player_77
+  - first:
+      213: 580800566096847540
+    second: Player_78
+  - first:
+      213: 7431829866033900645
+    second: Player_79
+  - first:
+      213: -7584956380549873370
+    second: Player_0
+  - first:
+      213: 6651041511453414704
+    second: Player_1
+  - first:
+      213: 8654590631379428793
+    second: Player_2
+  - first:
+      213: 2104903475122899212
+    second: Player_3
+  - first:
+      213: 1550346661786639224
+    second: Player_4
+  - first:
+      213: -2137104641423072030
+    second: Player_5
+  - first:
+      213: -2913840584061128028
+    second: Player_6
+  - first:
+      213: -1314552440241993024
+    second: Player_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player_0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 2083
+        width: 420
+        height: 882
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6210e74db52dcb690800000000000000
+      internalID: -7584956380549873370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_1
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 2046
+        width: 373
+        height: 964
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035de84140f3d4c50800000000000000
+      internalID: 6651041511453414704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_2
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 2042
+        width: 361
+        height: 970
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b56bc343584b1870800000000000000
+      internalID: 8654590631379428793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1077
+        width: 420
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c098f21fe8e163d10800000000000000
+      internalID: 2104903475122899212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1083
+        width: 515
+        height: 911
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b51862310f38510800000000000000
+      internalID: 1550346661786639224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_5
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1083
+        width: 503
+        height: 911
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4a328c6aa7752e0800000000000000
+      internalID: -2137104641423072030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_6
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 77
+        width: 515
+        height: 905
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a27bee4d65ff87d0800000000000000
+      internalID: -2913840584061128028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_7
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 77
+        width: 509
+        height: 911
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cac0c83585c1cde0800000000000000
+      internalID: -1314552440241993024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 4db765527787dea41949cc01bd6aadef, type: 3}
+      name: main
+    - texture: {fileID: 2800000, guid: 878fdd21ac655d642b2bf494d7c8395d, type: 3}
+      name: emission
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
