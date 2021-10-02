@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class GrapplingGun : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class GrapplingGun : MonoBehaviour
     [SerializeField] private bool grappleToAll = false;
     [SerializeField] private int grappableLayerNumber = 9;
     [SerializeField] private float knockback = 9;
+    [SerializeField] Animator anim;
 
     [Header("Main Camera")]
     public Camera m_camera;
@@ -66,9 +69,21 @@ public class GrapplingGun : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            SetGrapplePoint();
+            anim.SetTrigger("Start");
+            Time.timeScale = 0.3f;
+            grappleRope.enabled = false;
+            m_springJoint2D.enabled = false;
+            
+            //SetGrapplePoint();
         }
-        else if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyDown("space"))
+        {
+            Time.timeScale = 1f;
+            grappleRope.enabled = false;
+            m_springJoint2D.enabled = false;
+            //SetGrapplePoint();
+        }
+        /*else if (Input.GetKey(KeyCode.Mouse0))
         {
             if (grappleRope.enabled)
             {
@@ -87,18 +102,58 @@ public class GrapplingGun : MonoBehaviour
                 }
             }
 
-        }
+        }*/
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            grappleRope.enabled = false;
-            m_springJoint2D.enabled = false;
+            anim.SetTrigger("ReStart");
+            Time.timeScale = 1f;
+            SetGrapplePoint();
+            //grappleRope.enabled = false;
+            //m_springJoint2D.enabled = false;
             //ballRigidbody.gravityScale = 1;
+            if (grappleRope.enabled)
+            {
+                RotateGun(grapplePoint, false);
+            }
+            else
+            {
+                RotateGun(m_camera.ScreenToWorldPoint(Input.mousePosition), false);
+            }
+
+            if (launchToPoint && grappleRope.isGrappling)
+            {
+                if (Launch_Type == LaunchType.Transform_Launch)
+                {
+                    gunHolder.position = Vector3.Lerp(gunHolder.position, grapplePoint, Time.deltaTime * launchSpeed);
+                }
+            }
         }
        
         else
         {
             RotateGun(m_camera.ScreenToWorldPoint(Input.mousePosition), true);
         }
+    }
+
+    IEnumerator grapple()
+    {
+        if (grappleRope.enabled)
+        {
+            RotateGun(grapplePoint, false);
+        }
+        else
+        {
+            RotateGun(m_camera.ScreenToWorldPoint(Input.mousePosition), false);
+        }
+
+        if (launchToPoint && grappleRope.isGrappling)
+        {
+            if (Launch_Type == LaunchType.Transform_Launch)
+            {
+                gunHolder.position = Vector3.Lerp(gunHolder.position, grapplePoint, Time.deltaTime * launchSpeed);
+            }
+        }
+        yield return new WaitForSeconds(1);
     }
 
     void RotateGun(Vector3 lookPoint, bool allowRotationOverTime)
