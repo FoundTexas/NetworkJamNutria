@@ -37,8 +37,9 @@ public class PlayerMovement : MonoBehaviour
         {
             rb2d.AddForce(lookDir * -KnockBack);
             Instantiate(shootParticle, firePoint.position, firePoint.rotation);
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
+            Bullet bullet = Instantiate(bulletPrefab, firePoint.position, this.transform.rotation).GetComponent<Bullet>();
+
+            bullet.SetDirection(lookDir);
             //bulletRB.AddForce(firePoint.right * bulletForce + new Vector3(0f, Random.Range(-120f, 120f), 0f));
         }
         Animations();
