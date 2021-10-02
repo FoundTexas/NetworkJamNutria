@@ -32,10 +32,10 @@ public class BasicEnemy : MonoBehaviour
 
 
            // RaycastHit2D hit;
-            RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, DireccionPlayer, DistancePlayer);
+            RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, DireccionPlayer, DistancePlayer*100);
             if (hitinfo.collider != null)
             {
-                if (hitinfo.collider.CompareTag("Player"))
+                if (hitinfo.collider.gameObject.layer==9)
                 {
                     Debug.Log("Le estoy printeando al player");
                 }
@@ -80,9 +80,10 @@ public class BasicEnemy : MonoBehaviour
     }
     public void OnDrawGizmos()
     {
-    
+        float DistancePlayer = Vector2.Distance(transform.position, PlayerPos.transform.position);
+        Vector2 DireccionPlayer = (PlayerPos.transform.position - transform.position).normalized;
         Gizmos.DrawWireSphere(transform.position, RangoDeteccionEnemigo);
-      
+        Gizmos.DrawLine(transform.position,transform.position*DireccionPlayer);
     }
    
 }
