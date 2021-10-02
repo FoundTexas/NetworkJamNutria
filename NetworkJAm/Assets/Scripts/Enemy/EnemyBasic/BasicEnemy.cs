@@ -32,16 +32,23 @@ public class BasicEnemy : MonoBehaviour
 
 
            // RaycastHit2D hit;
-            RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, DireccionPlayer, DistancePlayer);
+            RaycastHit2D hitinfo = Physics2D.Raycast(transform.position, DireccionPlayer, DistancePlayer*100);
             if (hitinfo.collider != null)
             {
                 if (hitinfo.collider.CompareTag("Player"))
                 {
+                    ContadorDispararCada();
+                    if (Count >= 2.5f)
+                    {
+                        DispararPlayer();
+                    }
+                    Debug.DrawLine(transform.position, hitinfo.point, Color.red);
                     Debug.Log("Le estoy printeando al player");
                 }
                 else
                 {
                     Debug.Log("Le estoy pegando a otra cosa");
+                    Debug.DrawLine(transform.position, hitinfo.point, Color.green);
                 }
             }
           //  Physics2D.Raycast(transform.position,DireccionPlayer, DistancePlayer, hit, layerPlayer);
