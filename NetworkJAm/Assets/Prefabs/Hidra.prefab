@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7973763517049440485}
   - component: {fileID: 7973763517049440486}
   - component: {fileID: 7973763517049440483}
-  m_Layer: 0
+  - component: {fileID: 7560357130366379627}
+  m_Layer: 2
   m_Name: Hidra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,3 +123,29 @@ MonoBehaviour:
   Bull: {fileID: 6992466055367974947, guid: 702742d00dc868c46bbc43e29d2359f1, type: 3}
   DireccionBull: []
   MultiBull: 0
+--- !u!61 &7560357130366379627
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7973763517049440487}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.6517928, y: 1.3000001}
+    newSize: {x: 26.51793, y: 13.000001}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.6517928, y: 1.3000001}
+  m_EdgeRadius: 0

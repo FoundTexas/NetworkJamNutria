@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0, b: 0.6787672, a: 1}
   m_FlipX: 0
@@ -100,6 +100,8 @@ MonoBehaviour:
   type: 5
   LifeTime: 4
   Speed: 8
+  TimeToExplote: 0
+  ColliderExplosion: {fileID: 0}
 --- !u!50 &1168351464333347008
 Rigidbody2D:
   serializedVersion: 4
@@ -155,3 +157,4 @@ MonoBehaviour:
   prefabBullHidra: {fileID: 0}
   DireccionBull: []
   NumOfBullsHidra: 0
+  Count: 0

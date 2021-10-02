@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instancia;//instanciaDelPlayer;
     [Header("Player Stuff:")]
     [SerializeField] private float speed = 0.5f, KnockBack = 6, bulletForce = 20f;
     [SerializeField] private Camera cam;
@@ -15,7 +16,13 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     Rigidbody2D rb2d;
     Vector2 movement,mousePos,lookDir;
-
+    private void Awake()
+    {
+        if (instancia == null)
+        {
+            instancia = this;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

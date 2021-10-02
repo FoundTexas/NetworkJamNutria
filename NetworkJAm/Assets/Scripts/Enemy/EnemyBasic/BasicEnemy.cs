@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicEnemy : MonoBehaviour
 {
-    public Transform PlayerPos;
+ 
     [SerializeField]private float RangoDeteccionEnemigo;
     [SerializeField]private LayerMask layerPlayer;
     private float Count;//Contador Disparar Cada
@@ -25,8 +25,8 @@ public class BasicEnemy : MonoBehaviour
     private int NumOfBulls;
     public void ApuntarPlayer()
     {
-        float DistancePlayer = Vector2.Distance(transform.position,PlayerPos.transform.position);
-        Vector2 DireccionPlayer = (PlayerPos.transform.position - transform.position).normalized;
+        float DistancePlayer = Vector2.Distance(transform.position, PlayerMovement.instancia.transform.position);
+        Vector2 DireccionPlayer = (PlayerMovement.instancia.transform.position - transform.position).normalized;
         if (DistancePlayer < RangoDeteccionEnemigo)
         {
 
@@ -87,10 +87,9 @@ public class BasicEnemy : MonoBehaviour
     }
     public void OnDrawGizmos()
     {
-        float DistancePlayer = Vector2.Distance(transform.position, PlayerPos.transform.position);
-        Vector2 DireccionPlayer = (PlayerPos.transform.position - transform.position).normalized;
+      
         Gizmos.DrawWireSphere(transform.position, RangoDeteccionEnemigo);
-        Gizmos.DrawLine(transform.position,transform.position*DireccionPlayer);
+      
     }
    
 }

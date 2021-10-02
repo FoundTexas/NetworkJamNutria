@@ -8,7 +8,8 @@ public class Bullet : MonoBehaviour
     public float LifeTime;
     Vector2 Direction;
     public float Speed;
-
+    [SerializeField] private bool SeguirDisparo; 
+   
     public Vector2 Direction1 { get => Direction; set => Direction = value; }
 
     private void OnEnable()
@@ -19,7 +20,7 @@ public class Bullet : MonoBehaviour
     {
         Direction = dir;
     }
-   
+  
     private void Destroy()
     {
         gameObject.SetActive(false);
@@ -27,9 +28,17 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.Translate(Direction * Speed * Time.deltaTime);
+        if (SeguirDisparo)
+        {
+            Vector2 DireccionPlayer = (PlayerMovement.instancia.transform.position - transform.position).normalized;
+            transform.Translate(DireccionPlayer * Speed * Time.deltaTime);
+            
+        
+        }
     }
     private void OnDisable()
     {
         CancelInvoke();
     }
+ 
 }

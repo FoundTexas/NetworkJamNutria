@@ -13,6 +13,10 @@ public class EnemyBulletCollision : MonoBehaviour
     [SerializeField] private List<Vector2> DireccionBull;
     [SerializeField]private int NumOfBullsHidra;
     #endregion
+    #region Crap
+    public float Count;
+
+    #endregion
     public enum TipeEnemy
     {
         Glob,
