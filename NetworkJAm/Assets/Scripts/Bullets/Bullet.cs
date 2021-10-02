@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     Vector2 Direction;
     public float Speed;
 
+    public Vector2 Direction1 { get => Direction; set => Direction = value; }
+
     private void OnEnable()
     {
         Invoke("Destroy", LifeTime);
@@ -17,6 +19,7 @@ public class Bullet : MonoBehaviour
     {
         Direction = dir;
     }
+   
     private void Destroy()
     {
         gameObject.SetActive(false);
