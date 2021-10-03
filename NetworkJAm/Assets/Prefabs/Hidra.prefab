@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 4
-  RangoDeteccionEnemigo: 3
+  RangoDeteccionEnemigo: 5
   layerPlayer:
     serializedVersion: 2
     m_Bits: 512
