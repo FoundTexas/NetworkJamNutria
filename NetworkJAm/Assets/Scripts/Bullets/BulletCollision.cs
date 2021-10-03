@@ -20,7 +20,11 @@ public class BulletCollision : MonoBehaviour
         }
         if (collider.gameObject.CompareTag("Enemy"))
         {
-            collider.gameObject.GetComponent<BasicEnemy>().Dmg();
+            BasicEnemy B = collider.gameObject.GetComponent<BasicEnemy>();
+            if (B != null)
+            {
+                B.Dmg();
+            }
             Instantiate(bulletExplode, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
