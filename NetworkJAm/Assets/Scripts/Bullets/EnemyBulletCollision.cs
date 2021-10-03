@@ -27,55 +27,46 @@ public class EnemyBulletCollision : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         //Debug.Log("collision");
-
-        if (collider.gameObject.CompareTag("Player"))
+        switch (TipoEnemigo)
         {
-            collider.gameObject.GetComponent<PlayerMovement>().TakeDamage();
-            Instantiate(bulletExplode, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
-        else
-        {
-            switch (TipoEnemigo)
-            {
-                case TipeEnemy.Calamar:
-                    if (collider.gameObject.CompareTag("Obstacle"))
+            case TipeEnemy.Calamar:
+                if (collider.gameObject.CompareTag("Obstacle"))
+                {
+                    Instantiate(bulletExplode, transform.position, Quaternion.identity);
+                    Destroy(gameObject);
+                }
+                ; break;
+            case TipeEnemy.Hidra:
+                if (collider.gameObject.CompareTag("Obstacle"))
+                {
+                
+                    Bullet thisbull = GetComponent<Bullet>();
+                    for (int i = 0; i < NumOfBullsHidra; i++)
                     {
-                        Instantiate(bulletExplode, transform.position, Quaternion.identity);
-                        Destroy(gameObject);
+                     GameObject bullHidra=Instantiate(prefabBullHidra, transform.position, Quaternion.identity);
+                        Bullet Bull = bullHidra.GetComponent<Bullet>();
+                        Bull.SetDirection(new Vector2(Random.Range(thisbull.Direction1.x*-1+ 0.5f, thisbull.Direction1.x * -1+1f),Random.Range(thisbull.Direction1.y * -1 + 0.5f, thisbull.Direction1.y * -1 + 1f)));
+                        //Bull.SetDirection(new Vector2(thisbull.Direction1.x*-1, thisbull.Direction1.y*-1));
                     }
-                    ; break;
-                case TipeEnemy.Hidra:
-                    if (collider.gameObject.CompareTag("Obstacle"))
-                    {
+                        Instantiate(bulletExplode, transform.position, Quaternion.identity);
+                    Destroy(gameObject);
+                }
 
-                        Bullet thisbull = GetComponent<Bullet>();
-                        for (int i = 0; i < NumOfBullsHidra; i++)
-                        {
-                            GameObject bullHidra = Instantiate(prefabBullHidra, transform.position, Quaternion.identity);
-                            Bullet Bull = bullHidra.GetComponent<Bullet>();
-                            Bull.SetDirection(new Vector2(Random.Range(thisbull.Direction1.x * -1 + 0.5f, thisbull.Direction1.x * -1 + 1f), Random.Range(thisbull.Direction1.y * -1 + 0.5f, thisbull.Direction1.y * -1 + 1f)));
-                            //Bull.SetDirection(new Vector2(thisbull.Direction1.x*-1, thisbull.Direction1.y*-1));
-                        }
-                        Instantiate(bulletExplode, transform.position, Quaternion.identity);
-                        Destroy(gameObject);
-                    }
-
-                    ; break;
-                case TipeEnemy.Crab:
-                    if (collider.gameObject.CompareTag("Obstacle"))
-                    {
-                        Instantiate(bulletExplode, transform.position, Quaternion.identity);
-                        Destroy(gameObject);
-                    }; break;
-                case TipeEnemy.Glob:
-                    if (collider.gameObject.CompareTag("Obstacle"))
-                    {
-                        Instantiate(bulletExplode, transform.position, Quaternion.identity);
-                        Destroy(gameObject);
-                    }; break;
-            }
+                ; break;
+            case TipeEnemy.Crab:
+                if (collider.gameObject.CompareTag("Obstacle"))
+                {
+                    Instantiate(bulletExplode, transform.position, Quaternion.identity);
+                    Destroy(gameObject);
+                }; break;
+            case TipeEnemy.Glob:
+                if (collider.gameObject.CompareTag("Obstacle"))
+                {
+                    Instantiate(bulletExplode, transform.position, Quaternion.identity);
+                    Destroy(gameObject);
+                }; break;
         }
+      
 
     }
   /*  private void OnCollisionEnter2D(Collision2D collision)

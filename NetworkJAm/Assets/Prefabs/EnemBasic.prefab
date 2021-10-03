@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7717244233938790597}
   m_Layer: 2
   m_Name: EnemBasic
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -151,8 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54adde2cdebc66e4c9e0227e9e28fdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1
-  SR: {fileID: 3863432968676432609}
   RangoDeteccionEnemigo: 6
   layerPlayer:
     serializedVersion: 2
