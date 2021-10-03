@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BasicEnemy : MonoBehaviour
 {
- 
+
+    [SerializeField] private int HP;
+    [SerializeField] private SpriteRenderer SR;
     [SerializeField]private float RangoDeteccionEnemigo;
     [SerializeField]private LayerMask layerPlayer;
     private float Count;//Contador Disparar Cada
@@ -24,6 +26,7 @@ public class BasicEnemy : MonoBehaviour
     public Animator AnimacionController { get => animacionController; set => animacionController = value; }
 
     private int NumOfBulls;
+
     public void ApuntarPlayer()
     {
         float DistancePlayer = Vector2.Distance(transform.position, PlayerMovement.instancia.transform.position);
@@ -91,6 +94,22 @@ public class BasicEnemy : MonoBehaviour
       
         Gizmos.DrawWireSphere(transform.position, RangoDeteccionEnemigo);
       
+    }
+    public void TakeDamage()
+    {
+        HP--;
+        StartCoroutine(DMG());
+        if(HP <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    IEnumerator DMG()
+    {
+        SR.color = new Color(255, 0, 0);
+        yield return new WaitForSeconds(0.3f);
+        SR.color = new Color(255, 255, 255);
     }
    
 }

@@ -18,6 +18,13 @@ public class BulletCollision : MonoBehaviour
             Instantiate(bulletExplode, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+ 
+        else if (collider.gameObject.CompareTag("Enemy"))
+        {
+            collider.gameObject.GetComponent<BasicEnemy>().TakeDamage();
+            Instantiate(bulletExplode, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
 
     }
 }

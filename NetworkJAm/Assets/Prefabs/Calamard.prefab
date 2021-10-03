@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7283970798422472842}
   m_Layer: 2
   m_Name: Calamard
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,14 +116,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3545f2f4042f348894873a960aeb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RangoDeteccionEnemigo: 4
+  HP: 3
+  SR: {fileID: 5344069218958689382}
+  RangoDeteccionEnemigo: 10
   layerPlayer:
     serializedVersion: 2
     m_Bits: 512
   Bull: {fileID: 2876054025018645096, guid: 841277fe3fa3c9c41980d79b7c954ad2, type: 3}
   DireccionBull: []
   MultiBull: 0
-  TimeToShoot: 1.8
+  TimeToShoot: 1.5
 --- !u!114 &2700398013187629611
 MonoBehaviour:
   m_ObjectHideFlags: 0
