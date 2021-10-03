@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df87d28dc270174d9df6d438f978cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  h: {fileID: 8300000, guid: d9f797eed5364634ea57bd92253c0c0e, type: 3}
   audios: {fileID: 7158498457405801084}
   grappleRope: {fileID: 3630422903116112480}
   grappleToAll: 0
@@ -204,7 +205,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9f865e8916a89354fa7350a6ecbe1bf9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d9f797eed5364634ea57bd92253c0c0e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -624,6 +625,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e424fa4613c84ab44bd4a43ef5306d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  h: {fileID: 0}
+  b: {fileID: 8300000, guid: 9f865e8916a89354fa7350a6ecbe1bf9, type: 3}
+  audios: {fileID: 1175541061352304938}
   speed: 30
   KnockBack: 50
   bulletForce: 20
@@ -738,16 +742,16 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9dd980ad7d65d6e4a8fd212f5c540428, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9f865e8916a89354fa7350a6ecbe1bf9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 3
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
+  Priority: 108
+  DopplerLevel: 5
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
@@ -784,7 +788,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.546
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -814,7 +818,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

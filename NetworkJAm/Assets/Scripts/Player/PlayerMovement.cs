@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public AudioClip h, b;
+    public AudioSource audios;
     public static PlayerMovement instancia;//instanciaDelPlayer;
     [Header("Player Stuff:")]
     [SerializeField] private float speed = 0.5f, KnockBack = 6, bulletForce = 20f;
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audios = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         cam = Camera.main;
@@ -47,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (Input.GetKeyUp(KeyCode.Mouse1))
             {
+                audios.PlayOneShot(b);
                 rb2d.AddForce(lookDir * -KnockBack);
                 Instantiate(shootParticle, firePoint.position, firePoint.rotation);
                 Bullet bullet = Instantiate(bulletPrefab, firePoint.position, this.transform.rotation).GetComponent<Bullet>();

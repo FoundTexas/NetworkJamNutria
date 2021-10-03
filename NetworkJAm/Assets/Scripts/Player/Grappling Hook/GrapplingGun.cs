@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GrapplingGun : MonoBehaviour
 {
+    public AudioClip h;
     public AudioSource audios;
     [Header("Scripts:")]
     public GrappleRope grappleRope;
@@ -184,7 +185,7 @@ public class GrapplingGun : MonoBehaviour
                 grapplePoint = _hit.point;
                 DistanceVector = grapplePoint - (Vector2)gunPivot.position;
                 grappleRope.enabled = true;
-                audios.Play();
+                audios.PlayOneShot(h);
             }
         }
     }
