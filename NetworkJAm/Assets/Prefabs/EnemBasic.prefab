@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -8656649883255756598}
   m_Layer: 2
   m_Name: EnemBasic
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,9 +137,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.15689275}
+  m_Offset: {x: -0.118993044, y: -0.15689272}
   serializedVersion: 2
-  m_Radius: 0.30432066
+  m_Radius: 0.58614635
 --- !u!114 &7717244233938790597
 MonoBehaviour:
   m_ObjectHideFlags: 0
