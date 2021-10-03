@@ -36,14 +36,14 @@ public class ParalaxBackground : MonoBehaviour
         
             Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
             
-            transform.position +=new Vector3( deltaMovement.x * parallaxEffectMultiplier.x,deltaMovement.y*parallaxEffectMultiplier.y,0);
+            transform.position +=new Vector3( deltaMovement.x * parallaxEffectMultiplier.x,deltaMovement.y*parallaxEffectMultiplier.y,0)*Time.deltaTime;
             lastCameraPosition = cameraTransform.position;
         if (InfiniteHorizontal)
         {
             if (Mathf.Abs(cameraTransform.position.x - transform.position.x) >= TextureUniteSizeX)
             {
                 float offsetPositionX = (cameraTransform.position.x - transform.position.x) % TextureUniteSizeX;
-                transform.position = new Vector3(transform.position.x, cameraTransform.position.y + offsetPositionX);
+                transform.position = new Vector3(transform.position.x, cameraTransform.position.y + offsetPositionX) * Time.deltaTime;
             }
         }
         if (InfiniteVertical)
@@ -51,7 +51,7 @@ public class ParalaxBackground : MonoBehaviour
             if (Mathf.Abs(cameraTransform.position.y - transform.position.y) >= TextureUniteSizeY)
             {
                 float offsetPositionY = (cameraTransform.position.y - transform.position.y) % TextureUniteSizeY;
-                transform.position = new Vector3(transform.position.x, cameraTransform.position.y + offsetPositionY);
+                transform.position = new Vector3(transform.position.x, cameraTransform.position.y + offsetPositionY) * Time.deltaTime;
             }
         }
     }

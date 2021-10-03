@@ -91,7 +91,17 @@ public class PlayerMovement : MonoBehaviour
     void Animations()
     {
 
-            animator.SetFloat("X", lookDir.x);
+        if (rb2d.velocity.x != 0)
+        {
+            if (lookDir.x > 0)
+            {
+                animator.SetFloat("X", rb2d.velocity.x);
+            }
+            else if(lookDir.x < 0)
+            {
+                animator.SetFloat("X", -rb2d.velocity.x);
+            }
+        }
 
         animator.SetFloat("Y", rb2d.velocity.y);
         //animator.SetFloat("Speed", movement.sqrMagnitude);

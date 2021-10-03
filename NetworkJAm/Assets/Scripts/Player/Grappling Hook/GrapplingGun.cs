@@ -109,7 +109,7 @@ public class GrapplingGun : MonoBehaviour
         }*/
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            harpoon.SetActive(true);
+            
             anim.SetTrigger("ReStart");
             Time.timeScale = 1f;
             SetGrapplePoint();
@@ -119,6 +119,7 @@ public class GrapplingGun : MonoBehaviour
             if (grappleRope.enabled)
             {
                 RotateGun(grapplePoint, false);
+
             }
             else
             {
@@ -145,6 +146,7 @@ public class GrapplingGun : MonoBehaviour
         if (grappleRope.enabled)
         {
             RotateGun(grapplePoint, false);
+            
         }
         else
         {
@@ -193,7 +195,7 @@ public class GrapplingGun : MonoBehaviour
 
     public void Grapple()
     {
-
+        harpoon.SetActive(true);
         if (!launchToPoint && !autoCongifureDistance)
         {
             m_springJoint2D.distance = targetDistance;

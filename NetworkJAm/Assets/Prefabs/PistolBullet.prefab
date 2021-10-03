@@ -104,7 +104,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -123,6 +123,7 @@ MonoBehaviour:
   type: 0
   LifeTime: 2
   Speed: 3
+  SeguirDisparo: 0
 --- !u!114 &1195842451971863983
 MonoBehaviour:
   m_ObjectHideFlags: 0
