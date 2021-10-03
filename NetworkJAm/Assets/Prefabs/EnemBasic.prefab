@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54adde2cdebc66e4c9e0227e9e28fdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 1
   RangoDeteccionEnemigo: 6
   layerPlayer:
     serializedVersion: 2
