@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(AudioSource))]
 public class BasicEnemy : MonoBehaviour
 {
     public int HP;
@@ -15,6 +15,12 @@ public class BasicEnemy : MonoBehaviour
     private Animator animacionController;
     private bool RayTouchSometing;
     [SerializeField]private float TimeToShoot;
+    public AudioSource audioss;
+    public AudioClip clipataque;
+    private void Awake()
+    {
+        audioss = GetComponent<AudioSource>();
+    }
     public float RangoDeteccionEnemigo1 { get => RangoDeteccionEnemigo; set => RangoDeteccionEnemigo = value; }
     public float Count1 { get => Count; set => Count = value; }
     public GameObject Bull1 { get => Bull; set => Bull = value; }
@@ -41,6 +47,7 @@ public class BasicEnemy : MonoBehaviour
                     ContadorDispararCada();
                     if (Count >= TimeToShoot)
                     {
+                        EjecutarSonidoAtaque();
                         DispararPlayer();
                     }
                     Debug.DrawLine(transform.position, hitinfo.point, Color.red);
@@ -72,6 +79,15 @@ public class BasicEnemy : MonoBehaviour
             
                  
         }
+    }
+    public void EjecutarSonidoAtaque()
+    {
+        if (clipataque != null)
+        {
+            audioss.PlayOneShot(clipataque);
+
+        }
+
     }
     public virtual void DispararPlayer()
     {

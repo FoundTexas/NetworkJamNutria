@@ -7,6 +7,19 @@ public class SceneLoader : MonoBehaviour
 {
     Animator anim;
     bool b = true;
+    bool IsActive = false;
+    [SerializeField]private List<GameObject> desactivateInTheStart;
+
+    private void Start()
+    {
+        if (desactivateInTheStart != null)
+        {
+            for (int i = 0; i < desactivateInTheStart.Count; i++)
+            {
+                desactivateInTheStart[i].SetActive(false);
+            }
+        }
+    }
     public void Reload()
     {
         Load(SceneManager.GetActiveScene().buildIndex);
@@ -29,5 +42,14 @@ public class SceneLoader : MonoBehaviour
             b = false;
             SceneManager.LoadScene(i);
         }
+    }
+    public void GoTOScene(int i)
+    {
+        SceneManager.LoadScene(i);
+    }
+    public void ActiveDesactive(GameObject objectToAD)
+    {
+        IsActive = !IsActive;
+        objectToAD.SetActive(IsActive);
     }
 }
