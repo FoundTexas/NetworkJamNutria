@@ -26,6 +26,12 @@ public class EnemyBulletCollision : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            collider.gameObject.GetComponent<PlayerMovement>().Dmg();
+            Instantiate(bulletExplode, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
         //Debug.Log("collision");
         switch (TipoEnemigo)
         {

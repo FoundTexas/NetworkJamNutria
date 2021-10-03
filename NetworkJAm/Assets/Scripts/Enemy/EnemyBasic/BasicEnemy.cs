@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicEnemy : MonoBehaviour
 {
- 
+    public int HP;
     [SerializeField]private float RangoDeteccionEnemigo;
     [SerializeField]private LayerMask layerPlayer;
     private float Count;//Contador Disparar Cada
@@ -91,6 +91,21 @@ public class BasicEnemy : MonoBehaviour
       
         Gizmos.DrawWireSphere(transform.position, RangoDeteccionEnemigo);
       
+    }
+    public void Dmg()
+    {
+        HP--;
+        StartCoroutine(DMG());
+        if (HP <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    IEnumerator DMG()
+    {
+        this.gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+        yield return new WaitForSeconds(0.3f);
+        this.gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
     }
    
 }

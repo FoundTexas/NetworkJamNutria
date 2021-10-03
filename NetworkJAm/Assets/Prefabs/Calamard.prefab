@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7283970798422472842}
   m_Layer: 2
   m_Name: Calamard
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3545f2f4042f348894873a960aeb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 2
   RangoDeteccionEnemigo: 13
   layerPlayer:
     serializedVersion: 2

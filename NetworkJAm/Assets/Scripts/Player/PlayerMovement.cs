@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private ParticleSystem shootParticle;
     [SerializeField] private GameObject bulletPrefab;
 
+    public GameObject Dead;
+
     public bool facingRight = false;
     Animator animator;
     Rigidbody2D rb2d;
@@ -32,48 +34,54 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (!Dead.activeInHierarchy)
         {
-            Time.timeScale = 0.3f;
-        }
-        else if (Input.GetKeyUp("space"))
-        {
-            Time.timeScale = 1;
-        }
-        else if (Input.GetKeyUp(KeyCode.Mouse1))
-        {
-            rb2d.AddForce(lookDir * -KnockBack);
-            Instantiate(shootParticle, firePoint.position, firePoint.rotation);
-            Bullet bullet = Instantiate(bulletPrefab, firePoint.position, this.transform.rotation).GetComponent<Bullet>();
+            if (Input.GetKeyDown("space"))
+            {
+                Time.timeScale = 0.3f;
+            }
+            else if (Input.GetKeyUp("space"))
+            {
+                Time.timeScale = 1;
+            }
+            else if (Input.GetKeyUp(KeyCode.Mouse1))
+            {
+                rb2d.AddForce(lookDir * -KnockBack);
+                Instantiate(shootParticle, firePoint.position, firePoint.rotation);
+                Bullet bullet = Instantiate(bulletPrefab, firePoint.position, this.transform.rotation).GetComponent<Bullet>();
 
-            bullet.SetDirection(lookDir);
-            //bulletRB.AddForce(firePoint.right * bulletForce + new Vector3(0f, Random.Range(-120f, 120f), 0f));
+                bullet.SetDirection(lookDir);
+                //bulletRB.AddForce(firePoint.right * bulletForce + new Vector3(0f, Random.Range(-120f, 120f), 0f));
+            }
+            Animations();
         }
-        Animations();
     }
 
     void FixedUpdate()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-        lookDir = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-
-        if (lookDir.x < 0)
+        if (!Dead.activeInHierarchy)
         {
-            Flip(-1);
-        }
-        else if (lookDir.x > 0)
-        {
-            Flip(1);
-        }
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
 
-        if(movement != Vector2.zero)
-        {
-            rb2d.velocity = Vector2.zero;
-            rb2d.AddForce(movement * speed);
+            mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+            lookDir = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+
+            if (lookDir.x < 0)
+            {
+                Flip(-1);
+            }
+            else if (lookDir.x > 0)
+            {
+                Flip(1);
+            }
+
+            if (movement != Vector2.zero)
+            {
+                rb2d.velocity = Vector2.zero;
+                rb2d.AddForce(movement * speed);
+            }
         }
     }
 
@@ -107,5 +115,10 @@ public class PlayerMovement : MonoBehaviour
         //animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
+    public void Dmg()
+    {
+        Dead.SetActive(true);
+        FindObjectOfType<SceneLoader>().Reload();
+    }
 
 }
