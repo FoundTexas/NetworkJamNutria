@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/OpeningScene.unity
     guid: 49661263184112e438bd3cb1d92e4113
   - enabled: 1
-    path: Assets/Scenes/FoundTexas(Testing).unity
-    guid: a877a159744aa09418fae444c86acdab
+    path: Assets/Scenes/Game.unity
+    guid: 7a4a81033307cd441b555768a1666ebe
   - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: b02822108ec1361408fdf0e1349fa1bd

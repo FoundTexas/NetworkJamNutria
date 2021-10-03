@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        cam = Camera.main;
     }
 
     private void Update()

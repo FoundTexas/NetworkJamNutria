@@ -52,4 +52,12 @@ public class SceneLoader : MonoBehaviour
         IsActive = !IsActive;
         objectToAD.SetActive(IsActive);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            Load(3);
+        }
+    }
 }

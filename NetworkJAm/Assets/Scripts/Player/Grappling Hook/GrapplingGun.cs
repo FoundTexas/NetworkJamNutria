@@ -58,6 +58,7 @@ public class GrapplingGun : MonoBehaviour
 
     private void Start()
     {
+        m_camera = Camera.main;
         grappleRope.enabled = false;
         m_springJoint2D.enabled = false;
         //ballRigidbody.gravityScale = 1;
