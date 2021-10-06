@@ -31,11 +31,6 @@ public class ThirdEnemy : BasicEnemy
             AnimacionController.SetBool("CanShoot", true);
 
              Bullets = bull.GetComponent<Bullet>();
-            Bullets.SetDirection(PlayerMovement.instancia.transform.position);
-       
-           
-            
-            
             Count1 = 0;
         }
     }

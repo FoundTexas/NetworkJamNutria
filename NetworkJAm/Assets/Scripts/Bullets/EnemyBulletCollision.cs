@@ -28,6 +28,7 @@ public class EnemyBulletCollision : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
+            print("Hola");
             collider.gameObject.GetComponent<PlayerMovement>().Dmg();
             Instantiate(bulletExplode, transform.position, Quaternion.identity);
             Destroy(gameObject);
