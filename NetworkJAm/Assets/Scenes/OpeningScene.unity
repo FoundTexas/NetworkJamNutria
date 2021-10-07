@@ -730,6 +730,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0ff84818120674a9221988ec1ad9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogo:
+  - textos:
+    - "\xBFHas sentido que hay algo m\xE1s grande que una vida cotidiana en tu existencia?\r\nAlgo
+      que desesperadamente necesita ser descubierto mientras el misterio te llama."
+    - "Esa fue tu motivaci\xF3n para este viaje, el descubrir la verdades del basto
+      oc\xE9ano\r"
+    - "\xBFQu\xE9 clase de maravillas podr\xEDas encontrar, Tesoros, criaturas, esperanza
+      o m\xE1s devastaci\xF3n?"
+    - "Es el momento de que esas dudas sean resueltas, aqu\xED comienza nuestro viaje
+      a la verdad\r"
+  - textos:
+    - 'Have you felt that there is something greater than an everyday life in your
+      existence?
+
+      Something that desperately needs to be discovered as the
+      mystery calls out to you.'
+    - That was your motivation for this trip, to discover the truths of the vast
+      ocean.
+    - What kind of wonders could you find, Treasures, creatures, hope or more devastation?
+    - It is time for those doubts to be resolved, here our journey to find the truth
+      begins
+  - textos:
+    - "Avez-vous ressenti qu'il y a quelque chose de plus grand qu'une vie quotidienne
+      dans votre existence ?\r\nQuelque chose qui a d\xE9sesp\xE9r\xE9ment besoin
+      d'\xEAtre d\xE9couvert alors que le myst\xE8re vous apelle."
+    - "Ce la votre motivation pour ce voyage, pour d\xE9couvrir les v\xE9rit\xE9s
+      du vaste oc\xE9an."
+    - "Quel  merveilles pourriez-vous trouver, des tr\xE9sors, des cr\xE9atures,
+      des espoirs ou plus de d\xE9vastation\_?"
+    - "Il est temps que ces doutes soient r\xE9solus, ici commence notre voyage vers
+      la v\xE9rit\xE9"
   texto: {fileID: 219627532}
   textos:
   - "\xBFHas sentido que hay algo m\xE1s grande que una vida cotidiana en tu existencia?\r\nAlgo
