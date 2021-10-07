@@ -8,13 +8,14 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource audios;
     public static PlayerMovement instancia;//instanciaDelPlayer;
     [Header("Player Stuff:")]
-    [SerializeField] private float speed = 0.5f, KnockBack = 6, bulletForce = 20f;
+    [SerializeField] private float speed = 0.5f, KnockBack = 6, bulletForce = 20f, Resistencia  = 1;
     [SerializeField] private Camera cam;
     [SerializeField] private Transform weaponHolder, firePoint;
     [SerializeField] private ParticleSystem shootParticle;
     [SerializeField] private GameObject bulletPrefab;
 
     public GameObject Dead;
+    public float vel;
 
     public bool facingRight = false;
     Animator animator;
@@ -84,9 +85,16 @@ public class PlayerMovement : MonoBehaviour
 
             if (movement != Vector2.zero)
             {
-                rb2d.velocity = Vector2.zero;
+                //rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(movement * speed);
             }
+
+            if (rb2d.velocity.magnitude > 0)
+            {
+                rb2d.AddRelativeForce(rb2d.velocity.normalized *-Resistencia);
+            }
+
+                vel = rb2d.velocity.magnitude;
         }
     }
 
