@@ -11,6 +11,11 @@ public class SetLanguage : MonoBehaviour
 
     public void Start()
     {
+        if (PlayerPrefs.GetInt("Started") == 0) {
+            PlayerPrefs.SetInt("lang", 1);
+            PlayerPrefs.SetInt("Started",1);
+        }
+
         text.text = texts[PlayerPrefs.GetInt("lang")];
     }
     public void setL(int l)
