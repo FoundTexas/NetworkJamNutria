@@ -49,10 +49,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 Time.timeScale = 1;
             }
-            else if (Input.GetKeyUp(KeyCode.Mouse1))
+
+            if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 audios.PlayOneShot(b);
-                rb2d.AddForce(lookDir * -KnockBack);
+                rb2d.velocity = Vector2.zero;
+                rb2d.AddRelativeForce(lookDir * -KnockBack); 
+                //rb2d.AddForce(lookDir * -KnockBack);
                 Instantiate(shootParticle, firePoint.position, firePoint.rotation);
                 Bullet bullet = Instantiate(bulletPrefab, firePoint.position, this.transform.rotation).GetComponent<Bullet>();
 
@@ -83,16 +86,18 @@ public class PlayerMovement : MonoBehaviour
                 Flip(1);
             }
 
+
             if (movement != Vector2.zero)
             {
-                //rb2d.velocity = Vector2.zero;
+                rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(movement * speed);
             }
 
-            if (rb2d.velocity.magnitude > 0)
+            if (rb2d.velocity.magnitude > 1)
             {
                 rb2d.AddRelativeForce(rb2d.velocity.normalized *-Resistencia);
             }
+
 
                 vel = rb2d.velocity.magnitude;
         }

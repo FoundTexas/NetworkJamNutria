@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GrapplingGun : MonoBehaviour
 {
+    public GameObject OOR;
     public AudioClip h;
     public AudioSource audios;
     [Header("Scripts:")]
@@ -120,22 +121,34 @@ public class GrapplingGun : MonoBehaviour
             }
             else
             {
+                StartCoroutine(OutOfRange());
+
                 RotateGun(m_camera.ScreenToWorldPoint(Input.mousePosition), false);
             }
 
             if (launchToPoint && grappleRope.isGrappling)
             {
+                StopAllCoroutines();
+                OOR.SetActive(false);
                 if (Launch_Type == LaunchType.Transform_Launch)
                 {
                     gunHolder.position = Vector3.Lerp(gunHolder.position, grapplePoint, Time.deltaTime * launchSpeed);
                 }
             }
+            
         }
        
         else
         {
             RotateGun(m_camera.ScreenToWorldPoint(Input.mousePosition), true);
         }
+    }
+
+    IEnumerator OutOfRange()
+    {
+        OOR.SetActive(true);
+        yield return new WaitForSeconds(0.7f);
+        OOR.SetActive(false);
     }
 
     IEnumerator grapple()
